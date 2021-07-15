@@ -19,12 +19,3 @@ struct FilmApiModel: Codable {
     }
 }
 
-extension FilmApiModel {
-    func mapToFilm() -> Film {
-        Film(
-            title: title ?? "",
-            openingCrawl: openingCrawl ?? "",
-            releaseDate: releaseDate?.toDate(format: "yyyy-MM-dd") ?? Date()
-        )
-    }
-}

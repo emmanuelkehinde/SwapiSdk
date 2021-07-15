@@ -12,3 +12,14 @@ public struct PlanetPopulation {
     public let planetName: String
     public let planetClimate: String
 }
+
+extension PlanetApiModel {
+    func mapToPlanetPopulation() -> PlanetPopulation {
+        PlanetPopulation(
+            population: population ?? "",
+            planetName: name ?? "",
+            planetClimate: climate ?? ""
+        )
+    }
+}
+

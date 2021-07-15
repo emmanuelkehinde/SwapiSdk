@@ -12,3 +12,12 @@ public struct PersonEyeColor {
     public let personName: String
 }
 
+extension PersonApiModel {
+    func mapToPersonEyeColor() -> PersonEyeColor {
+        PersonEyeColor(
+            eyeColor: eyeColor ?? "",
+            personName: name ?? ""
+        )
+    }
+}
+

@@ -19,12 +19,3 @@ struct PlanetApiModel: Codable {
     }
 }
 
-extension PlanetApiModel {
-    func mapToPlanetPopulation() -> PlanetPopulation {
-        PlanetPopulation(
-            population: population ?? "",
-            planetName: name ?? "",
-            planetClimate: climate ?? ""
-        )
-    }
-}

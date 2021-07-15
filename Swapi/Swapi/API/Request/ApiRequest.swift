@@ -18,5 +18,3 @@ struct ApiRequest {
         case get = "GET"
     }
 }
-
-

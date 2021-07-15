@@ -17,11 +17,3 @@ struct PersonApiModel: Codable {
     }
 }
 
-extension PersonApiModel {
-    func mapToPersonEyeColor() -> PersonEyeColor {
-        PersonEyeColor(
-            eyeColor: eyeColor ?? "",
-            personName: name ?? ""
-        )
-    }
-}
