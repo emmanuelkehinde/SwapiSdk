@@ -58,4 +58,10 @@ swapiClient.getPlanetsPopulation { planetsPopulation in
 }
 ```
 
+## Key Concepts
+
+- Project follows the [SOLID](https://en.wikipedia.org/wiki/SOLID) principle as much as possible
+- [Swiftlint](https://github.com/realm/SwiftLint) is used to ensure proper styling and convertions are followed
+- Project exhibits some amount of Code Coverage
+
 Enjoy! 🚀
