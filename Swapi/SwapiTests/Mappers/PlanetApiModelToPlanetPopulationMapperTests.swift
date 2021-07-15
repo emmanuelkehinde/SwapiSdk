@@ -8,6 +8,7 @@
 import XCTest
 @testable import Swapi
 
+// swiftlint:disable type_name
 class PlanetApiModelToPlanetPopulationMapperTests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -19,7 +20,11 @@ class PlanetApiModelToPlanetPopulationMapperTests: XCTestCase {
     }
 
     func test_planetApiModelToPlanetPopulation_shouldBeSuccessful() throws {
-        let expectedPlanetPopulation = PlanetPopulation(population: "10000", planetName: "Tatooine", planetClimate: "Arid")
+        let expectedPlanetPopulation = PlanetPopulation(
+            population: "10000",
+            planetName: "Tatooine",
+            planetClimate: "Arid"
+        )
 
         let planetApiModel = PlanetApiModel(name: "Tatooine", population: "10000", climate: "Arid")
         let actualPlanetPopulation = planetApiModel.mapToPlanetPopulation()

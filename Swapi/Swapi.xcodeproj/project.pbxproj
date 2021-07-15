@@ -249,6 +249,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51216112269EE81700151AC5 /* Build configuration list for PBXNativeTarget "Swapi" */;
 			buildPhases = (
+				5174653826A0C7080001CF33 /* ShellScript */,
 				512160F9269EE81700151AC5 /* Headers */,
 				512160FA269EE81700151AC5 /* Sources */,
 				512160FB269EE81700151AC5 /* Frameworks */,
@@ -334,6 +335,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5174653826A0C7080001CF33 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		512160FA269EE81700151AC5 /* Sources */ = {

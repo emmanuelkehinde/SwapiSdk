@@ -111,7 +111,7 @@ extension ApiClient {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = apiRequest.method.rawValue
 
-        let task = urlSession?.dataTask(with: urlRequest) { data, response, error in
+        let task = urlSession?.dataTask(with: urlRequest) { data, _, error in
             guard error == nil else {
                 DispatchQueue.main.async {
                     completion(.failure(error!))
@@ -141,7 +141,10 @@ extension ApiClient {
 
     private func getSerializedData<T: Decodable>(_ data: Data) -> T? {
         do {
-            guard let rawDict = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String:Any],
+            guard let rawDict = try JSONSerialization.jsonObject(
+                    with: data,
+                    options: .allowFragments
+            ) as? [String: Any],
                 let response = JSONDecoder().decode(ApiResponse<T>.self, from: rawDict) else {
                     return nil
             }
@@ -151,8 +154,7 @@ extension ApiClient {
             }
 
             return results
-        }
-        catch {
+        } catch {
             return nil
         }
     }

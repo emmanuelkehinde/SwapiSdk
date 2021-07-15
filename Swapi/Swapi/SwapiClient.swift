@@ -19,7 +19,10 @@ public class SwapiClient {
         self.init(apiClient: swapiDiContainer.apiClient)
     }
 
-    public func getEyeColors(onSuccess: @escaping ([PersonEyeColor]) -> Void, onFailure: @escaping (SwapiError) -> Void) {
+    public func getEyeColors(
+        onSuccess: @escaping ([PersonEyeColor]) -> Void,
+        onFailure: @escaping (SwapiError) -> Void
+    ) {
         apiClient?.getPeople(completion: { result in
             switch result {
             case .success(let people):
@@ -32,7 +35,10 @@ public class SwapiClient {
         })
     }
 
-    public func getPlanetsPopulation(onSuccess: @escaping ([PlanetPopulation]) -> Void, onFailure: @escaping (SwapiError) -> Void) {
+    public func getPlanetsPopulation(
+        onSuccess: @escaping ([PlanetPopulation]) -> Void,
+        onFailure: @escaping (SwapiError) -> Void
+    ) {
         apiClient?.getPlanets(completion: { result in
             switch result {
             case .success(let planets):
@@ -46,7 +52,10 @@ public class SwapiClient {
         })
     }
 
-    public func getFilms(onSuccess: @escaping ([Film]) -> Void, onFailure: @escaping (SwapiError) -> Void) {
+    public func getFilms(
+        onSuccess: @escaping ([Film]) -> Void,
+        onFailure: @escaping (SwapiError) -> Void
+    ) {
         apiClient?.getFilms(completion: { result in
             switch result {
             case .success(let films):

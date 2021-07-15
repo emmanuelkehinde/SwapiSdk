@@ -12,12 +12,14 @@ extension JSONDecoder {
     /**
      To remove the step of first converting to Data before calling JSONDecoder.decode()
      */
-    func decode<T: Decodable>(_ type: T.Type, from dictionary: Dictionary<String, Any?>) -> T? {
+    func decode<T: Decodable>(_ type: T.Type, from dictionary: [String: Any?]) -> T? {
         do {
-            let data = try JSONSerialization.data(withJSONObject: dictionary, options: JSONSerialization.WritingOptions.prettyPrinted)
+            let data = try JSONSerialization.data(
+                withJSONObject: dictionary,
+                options: JSONSerialization.WritingOptions.prettyPrinted
+            )
             return try decode(type, from: data)
-        }
-        catch {
+        } catch {
             return nil
         }
     }

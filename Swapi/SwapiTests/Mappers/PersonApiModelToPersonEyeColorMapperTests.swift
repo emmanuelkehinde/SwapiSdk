@@ -8,6 +8,7 @@
 import XCTest
 @testable import Swapi
 
+// swiftlint:disable type_name
 class PersonApiModelToPersonEyeColorMapperTests: XCTestCase {
 
     override func setUpWithError() throws {

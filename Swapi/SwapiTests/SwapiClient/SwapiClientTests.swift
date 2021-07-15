@@ -21,12 +21,10 @@ class SwapiClientTests: XCTestCase {
     }
 
     func test_getEyeColors_shouldBeSuccessful() throws {
-
-
         swapiClient.getEyeColors { people in
             XCTAssertEqual(people.count, 1)
         } onFailure: { _ in
-            XCTFail()
+            XCTFail("Failed to get eye colors")
         }
     }
 
@@ -34,7 +32,7 @@ class SwapiClientTests: XCTestCase {
         swapiClient.getPlanetsPopulation { planets in
             XCTAssertEqual(planets.count, 1)
         } onFailure: { _ in
-            XCTFail()
+            XCTFail("Failed to get planets population")
         }
     }
 
@@ -42,7 +40,7 @@ class SwapiClientTests: XCTestCase {
         swapiClient.getFilms { films in
             XCTAssertEqual(films.count, 1)
         } onFailure: { _ in
-            XCTFail()
+            XCTFail("Failed to get films")
         }
     }
 }

@@ -10,9 +10,9 @@ import Foundation
 struct ApiRequest {
     let path: String
     let method: Method
-    var bodyParameters: [String: Any]? = nil
-    var queryParameters: [String: Any]? = nil
-    var pathParameters: [String]? = nil
+    var bodyParameters: [String: Any]?
+    var queryParameters: [String: Any]?
+    var pathParameters: [String]?
 
     enum Method: String {
         case get = "GET"

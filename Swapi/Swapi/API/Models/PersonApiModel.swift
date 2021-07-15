@@ -16,4 +16,3 @@ struct PersonApiModel: Codable {
         case eyeColor = "eye_color"
     }
 }
-

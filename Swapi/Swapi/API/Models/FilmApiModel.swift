@@ -18,4 +18,3 @@ struct FilmApiModel: Codable {
         case releaseDate = "release_date"
     }
 }
-

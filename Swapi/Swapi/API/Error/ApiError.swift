@@ -15,7 +15,6 @@ enum ApiError: Error, LocalizedError {
     case unDecodableResponse
     case unknownError
 
-
     public var errorDescription: String? {
         switch self {
         case .badRequestData:

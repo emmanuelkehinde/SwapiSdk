@@ -18,4 +18,3 @@ struct PlanetApiModel: Codable {
         case climate
     }
 }
-
