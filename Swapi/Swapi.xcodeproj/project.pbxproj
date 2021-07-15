@@ -19,6 +19,9 @@
 		5167E765269F829500E651C3 /* PlanetPopulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167E764269F829500E651C3 /* PlanetPopulation.swift */; };
 		5167E769269F858000E651C3 /* PersonApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167E768269F858000E651C3 /* PersonApiModel.swift */; };
 		5167E76D269F865000E651C3 /* PersonEyeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5167E76C269F865000E651C3 /* PersonEyeColor.swift */; };
+		5174652926A0C1340001CF33 /* FilmApiModelToFilmMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174652826A0C1340001CF33 /* FilmApiModelToFilmMapperTests.swift */; };
+		5174652F26A0C2DA0001CF33 /* PlanetApiModelToPlanetPopulationMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174652E26A0C2DA0001CF33 /* PlanetApiModelToPlanetPopulationMapperTests.swift */; };
+		5174653526A0C41B0001CF33 /* PersonApiModelToPersonEyeColorMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174653426A0C41B0001CF33 /* PersonApiModelToPersonEyeColorMapperTests.swift */; };
 		5192E1CA269EEB1D00C3B923 /* SwapiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192E1C9269EEB1D00C3B923 /* SwapiClient.swift */; };
 		5192E1F4269F23B700C3B923 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192E1F3269F23B700C3B923 /* ApiClient.swift */; };
 		5192E1F8269F241300C3B923 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5192E1F7269F241300C3B923 /* ApiRequest.swift */; };
@@ -54,6 +57,9 @@
 		5167E764269F829500E651C3 /* PlanetPopulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetPopulation.swift; sourceTree = "<group>"; };
 		5167E768269F858000E651C3 /* PersonApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApiModel.swift; sourceTree = "<group>"; };
 		5167E76C269F865000E651C3 /* PersonEyeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonEyeColor.swift; sourceTree = "<group>"; };
+		5174652826A0C1340001CF33 /* FilmApiModelToFilmMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmApiModelToFilmMapperTests.swift; sourceTree = "<group>"; };
+		5174652E26A0C2DA0001CF33 /* PlanetApiModelToPlanetPopulationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetApiModelToPlanetPopulationMapperTests.swift; sourceTree = "<group>"; };
+		5174653426A0C41B0001CF33 /* PersonApiModelToPersonEyeColorMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApiModelToPersonEyeColorMapperTests.swift; sourceTree = "<group>"; };
 		5192E1C9269EEB1D00C3B923 /* SwapiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwapiClient.swift; sourceTree = "<group>"; };
 		5192E1F3269F23B700C3B923 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		5192E1F7269F241300C3B923 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
@@ -118,8 +124,9 @@
 		5121610B269EE81700151AC5 /* SwapiTests */ = {
 			isa = PBXGroup;
 			children = (
+				5174652726A0C0E70001CF33 /* SwapiClient */,
+				5174652626A0C0E00001CF33 /* Mappers */,
 				5121610E269EE81700151AC5 /* Info.plist */,
-				5167E733269F53B300E651C3 /* SwapiClientTests.swift */,
 			);
 			path = SwapiTests;
 			sourceTree = "<group>";
@@ -148,6 +155,24 @@
 				5167E768269F858000E651C3 /* PersonApiModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5174652626A0C0E00001CF33 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				5174652826A0C1340001CF33 /* FilmApiModelToFilmMapperTests.swift */,
+				5174652E26A0C2DA0001CF33 /* PlanetApiModelToPlanetPopulationMapperTests.swift */,
+				5174653426A0C41B0001CF33 /* PersonApiModelToPersonEyeColorMapperTests.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		5174652726A0C0E70001CF33 /* SwapiClient */ = {
+			isa = PBXGroup;
+			children = (
+				5167E733269F53B300E651C3 /* SwapiClientTests.swift */,
+			);
+			path = SwapiClient;
 			sourceTree = "<group>";
 		};
 		5192E1C3269EEA2000C3B923 /* Models */ = {
@@ -338,6 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5174653526A0C41B0001CF33 /* PersonApiModelToPersonEyeColorMapperTests.swift in Sources */,
+				5174652926A0C1340001CF33 /* FilmApiModelToFilmMapperTests.swift in Sources */,
+				5174652F26A0C2DA0001CF33 /* PlanetApiModelToPlanetPopulationMapperTests.swift in Sources */,
 				5167E734269F53B300E651C3 /* SwapiClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
