@@ -30,6 +30,8 @@ Here is how to integrate the library into your iOS project.
 All the available functions lie within the `SwapiClient` class.
 
 ```swift
+import Swapi
+
 let swapiClient = SwapiClient()
 
 // All Starwars films, their title, opening crawl and the year they were released
