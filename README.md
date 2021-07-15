@@ -25,6 +25,8 @@ Here is how to integrate the library into your iOS project.
 
 - Pending release...
 
+You can however build the sdk and integrate the `Swapi.framework` generated into your project.
+
 ## Basic Usage
 
 All the available functions lie within the `SwapiClient` class.
