@@ -2,7 +2,7 @@
 iOS SDK for Star Wars API https://swapi.dev/
 
 ## Demo
-Run the Demo app to see the SDK in use
+Clone the repo and run the Demo app to see the SDK in use
 
 <img src=https://raw.githubusercontent.com/emmanuelkehinde/SwapiSdk/master/Docs/recording.gif width=300/>
 
