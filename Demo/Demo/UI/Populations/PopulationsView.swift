@@ -46,7 +46,7 @@ struct PopulationsView: View {
 
                     Text(planetPopulation.population)
                         .lineLimit(1)
-                        .minimumScaleFactor(0.8)
+                        .minimumScaleFactor(0.5)
                         .font(.title2)
                         .foregroundColor(Color.black)
 

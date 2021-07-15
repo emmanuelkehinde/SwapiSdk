@@ -36,9 +36,10 @@ public class SwapiClient {
         apiClient?.getPlanets(completion: { result in
             switch result {
             case .success(let planets):
-                onSuccess(
-                    Array(planets.map { $0.mapToPlanetPopulation() }.prefix(5))
-                )
+                let planetsSlice = planets.map {
+                    $0.mapToPlanetPopulation()
+                }.filter { $0.population != "unknown" }.prefix(5)
+                onSuccess(Array(planetsSlice))
             case .failure(let error):
                 onFailure(error.mapToSwapiError())
             }

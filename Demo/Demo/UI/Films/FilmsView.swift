@@ -22,7 +22,6 @@ struct FilmsView: View {
                             filmRow(film: films[index])
                         }
                     }
-//                    .padding(.top)
 
                     Spacer()
                 }
