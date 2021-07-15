@@ -2,7 +2,7 @@
 iOS SDK for Star Wars API https://swapi.dev/
 
 ## Demo
-Run the Demo app to see the SDK in use
+Clone the repo, open `SwapiSdk.xcworkspace` and run the Demo app to see the SDK in use
 
 <img src=https://raw.githubusercontent.com/emmanuelkehinde/SwapiSdk/master/Docs/recording.gif width=300/>
 
@@ -25,11 +25,15 @@ Here is how to integrate the library into your iOS project.
 
 - Pending release...
 
+You can however build the sdk and integrate the `Swapi.framework` generated into your project.
+
 ## Basic Usage
 
 All the available functions lie within the `SwapiClient` class.
 
 ```swift
+import Swapi
+
 let swapiClient = SwapiClient()
 
 // All Starwars films, their title, opening crawl and the year they were released
@@ -53,5 +57,11 @@ swapiClient.getPlanetsPopulation { planetsPopulation in
     print(error.localizedDescription)
 }
 ```
+
+## Key Concepts
+
+- Project follows the [SOLID](https://en.wikipedia.org/wiki/SOLID) principle as much as possible
+- [Swiftlint](https://github.com/realm/SwiftLint) is used to ensure proper styling and convertions are followed
+- Project exhibits some amount of Code Coverage
 
 Enjoy! 🚀
