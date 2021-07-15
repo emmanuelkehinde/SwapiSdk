@@ -17,6 +17,10 @@ let package = Package(
         .target(
             name: "Swapi",
             path: "Swapi/Swapi"
-        )
+        ),
+        .testTarget(
+            name: "SwapiTests",
+            dependencies: ["Swapi"],
+            path: "Swapi/SwapiTests")
     ]
 )
