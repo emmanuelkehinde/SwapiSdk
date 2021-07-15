@@ -29,7 +29,11 @@ You can however build the sdk and integrate the `Swapi.framework` generated into
 
 ## Basic Usage
 
-All the available functions lie within the `SwapiClient` class.
+The following functions are accessible through the `SwapiClient` class.
+
+- `getFilms()`: To get all Starwars films, their title, opening crawl and the year they were released
+- `getEyeColors()`: To get eye color of 5 different people from the Star Wars franchise
+- `getPlanetsPopulation()`: To get the population of 5 different planets that list their population and climate
 
 ```swift
 import Swapi
@@ -62,6 +66,6 @@ swapiClient.getPlanetsPopulation { planetsPopulation in
 
 - Project follows the [SOLID](https://en.wikipedia.org/wiki/SOLID) principle as much as possible
 - [Swiftlint](https://github.com/realm/SwiftLint) is used to ensure proper styling and convertions are followed
-- Project exhibits some amount of Code Coverage
+- Project exhibits some amount of Test Coverage
 
 Enjoy! 🚀
