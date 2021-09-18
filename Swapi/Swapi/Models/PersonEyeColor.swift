@@ -7,9 +7,13 @@
 
 import Foundation
 
-public struct PersonEyeColor {
+public struct PersonEyeColor: Equatable {
     public let eyeColor: String
     public let personName: String
+
+    public static func == (lhs: PersonEyeColor, rhs: PersonEyeColor) -> Bool {
+        return lhs.eyeColor == rhs.eyeColor && lhs.personName == rhs.personName
+    }
 }
 
 extension PersonApiModel {

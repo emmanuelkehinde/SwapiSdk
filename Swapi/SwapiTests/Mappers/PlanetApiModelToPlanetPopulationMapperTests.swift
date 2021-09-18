@@ -29,8 +29,6 @@ class PlanetApiModelToPlanetPopulationMapperTests: XCTestCase {
         let planetApiModel = PlanetApiModel(name: "Tatooine", population: "10000", climate: "Arid")
         let actualPlanetPopulation = planetApiModel.mapToPlanetPopulation()
 
-        XCTAssertEqual(expectedPlanetPopulation.population, actualPlanetPopulation.population)
-        XCTAssertEqual(expectedPlanetPopulation.planetName, actualPlanetPopulation.planetName)
-        XCTAssertEqual(expectedPlanetPopulation.planetClimate, actualPlanetPopulation.planetClimate)
+        XCTAssertEqual(expectedPlanetPopulation, actualPlanetPopulation)
     }
 }

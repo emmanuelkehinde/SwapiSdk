@@ -25,7 +25,6 @@ class PersonApiModelToPersonEyeColorMapperTests: XCTestCase {
         let personApiModel = PersonApiModel(name: "Luke", eyeColor: "Brown")
         let actualPersonEyeColor = personApiModel.mapToPersonEyeColor()
 
-        XCTAssertEqual(expectedPersonEyeColor.eyeColor, actualPersonEyeColor.eyeColor)
-        XCTAssertEqual(expectedPersonEyeColor.personName, actualPersonEyeColor.personName)
+        XCTAssertEqual(expectedPersonEyeColor, actualPersonEyeColor)
     }
 }

@@ -7,10 +7,16 @@
 
 import Foundation
 
-public struct PlanetPopulation {
+public struct PlanetPopulation: Equatable {
     public let population: String
     public let planetName: String
     public let planetClimate: String
+
+    public static func == (lhs: PlanetPopulation, rhs: PlanetPopulation) -> Bool {
+        return lhs.population == rhs.population &&
+            lhs.planetName == rhs.planetName &&
+            lhs.planetClimate == rhs.planetClimate
+    }
 }
 
 extension PlanetApiModel {

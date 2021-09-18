@@ -33,8 +33,6 @@ class FilmApiModelToFilmMapperTests: XCTestCase {
         )
         let actualFilm = filmApiModel.mapToFilm()
 
-        XCTAssertEqual(expectedFilm.title, actualFilm.title)
-        XCTAssertEqual(expectedFilm.openingCrawl, actualFilm.openingCrawl)
-        XCTAssertEqual(expectedFilm.releaseDate, actualFilm.releaseDate)
+        XCTAssertEqual(expectedFilm, actualFilm)
     }
 }
