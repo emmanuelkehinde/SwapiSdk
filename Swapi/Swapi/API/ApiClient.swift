@@ -92,7 +92,9 @@ extension ApiClient {
         completion: @escaping (Result<T, Error>) -> Void
     ) {
         guard var urlComponents = URLComponents(string: Constants.baseUrl + apiRequest.path) else {
-            completion(.failure(ApiError.badUrl))
+            DispatchQueue.main.async {
+                completion(.failure(ApiError.badUrl))
+            }
             return
         }
 
@@ -104,7 +106,9 @@ extension ApiClient {
         }
 
         guard let url = urlComponents.url else {
-            completion(.failure(ApiError.badUrl))
+            DispatchQueue.main.async {
+                completion(.failure(ApiError.badUrl))
+            }
             return
         }
 
