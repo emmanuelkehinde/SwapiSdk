@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51172D4A26F609B100C137D8 /* FilmsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51172D4926F609B100C137D8 /* FilmsViewModel.swift */; };
+		51172D5126F6146400C137D8 /* EyeColorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51172D5026F6146400C137D8 /* EyeColorsViewModel.swift */; };
+		51172D5826F6159000C137D8 /* PopulationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51172D5726F6159000C137D8 /* PopulationsViewModel.swift */; };
 		512160B3269EE42C00151AC5 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512160B2269EE42C00151AC5 /* DemoApp.swift */; };
 		512160B5269EE42C00151AC5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 512160B4269EE42C00151AC5 /* ContentView.swift */; };
 		512160B7269EE43300151AC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 512160B6269EE43300151AC5 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		51172D4926F609B100C137D8 /* FilmsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewModel.swift; sourceTree = "<group>"; };
+		51172D5026F6146400C137D8 /* EyeColorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeColorsViewModel.swift; sourceTree = "<group>"; };
+		51172D5726F6159000C137D8 /* PopulationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopulationsViewModel.swift; sourceTree = "<group>"; };
 		512160AF269EE42C00151AC5 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		512160B2269EE42C00151AC5 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
 		512160B4269EE42C00151AC5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51172D4726F608CD00C137D8 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				51172D5626F6158600C137D8 /* Populations */,
+				51172D4F26F6145300C137D8 /* EyeColors */,
+				51172D4826F6097C00C137D8 /* Films */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		51172D4826F6097C00C137D8 /* Films */ = {
+			isa = PBXGroup;
+			children = (
+				51172D4926F609B100C137D8 /* FilmsViewModel.swift */,
+			);
+			path = Films;
+			sourceTree = "<group>";
+		};
+		51172D4F26F6145300C137D8 /* EyeColors */ = {
+			isa = PBXGroup;
+			children = (
+				51172D5026F6146400C137D8 /* EyeColorsViewModel.swift */,
+			);
+			path = EyeColors;
+			sourceTree = "<group>";
+		};
+		51172D5626F6158600C137D8 /* Populations */ = {
+			isa = PBXGroup;
+			children = (
+				51172D5726F6159000C137D8 /* PopulationsViewModel.swift */,
+			);
+			path = Populations;
+			sourceTree = "<group>";
+		};
 		512160A6269EE42C00151AC5 = {
 			isa = PBXGroup;
 			children = (
@@ -125,12 +165,13 @@
 		512160B1269EE42C00151AC5 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				512FC905269FA88B00D42DAB /* Extensions */,
-				51CEEC1F269F98F800842816 /* UI */,
+				512160BB269EE43300151AC5 /* Info.plist */,
 				512160B2269EE42C00151AC5 /* DemoApp.swift */,
 				512160B6269EE43300151AC5 /* Assets.xcassets */,
-				512160BB269EE43300151AC5 /* Info.plist */,
 				512160B8269EE43300151AC5 /* Preview Content */,
+				512FC905269FA88B00D42DAB /* Extensions */,
+				51172D4726F608CD00C137D8 /* Presentation */,
+				51CEEC1F269F98F800842816 /* UI */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -347,9 +388,12 @@
 				51CEEC30269F996E00842816 /* EyeColorsView.swift in Sources */,
 				5128343126A06DC600134E5E /* String+Extensions.swift in Sources */,
 				512160B5269EE42C00151AC5 /* ContentView.swift in Sources */,
+				51172D5126F6146400C137D8 /* EyeColorsViewModel.swift in Sources */,
 				51CEEC2A269F995400842816 /* PopulationsView.swift in Sources */,
+				51172D5826F6159000C137D8 /* PopulationsViewModel.swift in Sources */,
 				512160B3269EE42C00151AC5 /* DemoApp.swift in Sources */,
 				51CEEC22269F992000842816 /* FilmsView.swift in Sources */,
+				51172D4A26F609B100C137D8 /* FilmsViewModel.swift in Sources */,
 				512FC907269FA89900D42DAB /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

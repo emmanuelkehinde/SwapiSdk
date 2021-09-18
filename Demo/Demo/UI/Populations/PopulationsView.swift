@@ -9,17 +9,17 @@ import SwiftUI
 import Swapi
 
 struct PopulationsView: View {
-    @State private var planetsPopulation: [PlanetPopulation] = []
+    @EnvironmentObject var viewModel: PopulationsViewModel
 
     var body: some View {
         NavigationView {
             ScrollView {
-                if planetsPopulation.isEmpty {
+                if viewModel.planetsPopulation.isEmpty {
                     ProgressView().padding(.top)
                 } else {
                     LazyVGrid(columns: .init(repeating: .init(), count: 2), spacing: 16) {
-                        ForEach(0..<planetsPopulation.count) { index in
-                            populationRow(planetPopulation: planetsPopulation[index])
+                        ForEach(0..<viewModel.planetsPopulation.count) { index in
+                            populationRow(planetPopulation: viewModel.planetsPopulation[index])
                         }
                     }
                     .padding(.top)
@@ -31,9 +31,7 @@ struct PopulationsView: View {
             .navigationBarTitle("Planets Population")
         }
         .onAppear(perform: {
-            if planetsPopulation.isEmpty {
-                fetchPlanetsPopulation()
-            }
+            viewModel.fetchPlanetsPopulation()
         })
     }
 
@@ -78,16 +76,6 @@ struct PopulationsView: View {
                     .fill(Color.white)
                     .shadow(color: Color.gray.opacity(0.8), radius: 0.8)
             )
-        }
-    }
-
-    private func fetchPlanetsPopulation() {
-        let swapiClient = SwapiClient()
-
-        swapiClient.getPlanetsPopulation { planetsPopulation in
-            self.planetsPopulation = planetsPopulation
-        } onFailure: { error in
-            print(error.localizedDescription)
         }
     }
 }

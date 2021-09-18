@@ -9,17 +9,17 @@ import SwiftUI
 import Swapi
 
 struct EyeColorsView: View {
-    @State private var eyeColors: [PersonEyeColor] = []
+    @EnvironmentObject var viewModel: EyeColorsViewModel
 
     var body: some View {
         NavigationView {
             ScrollView {
-                if eyeColors.isEmpty {
+                if viewModel.eyeColors.isEmpty {
                     ProgressView().padding(.top)
                 } else {
                     LazyVGrid(columns: .init(repeating: .init(), count: 2), spacing: 16) {
-                        ForEach(0..<eyeColors.count) { index in
-                            eyeColorRow(personEyeColor: eyeColors[index])
+                        ForEach(0..<viewModel.eyeColors.count) { index in
+                            eyeColorRow(personEyeColor: viewModel.eyeColors[index])
                         }
                     }
                     .padding(.top)
@@ -31,9 +31,7 @@ struct EyeColorsView: View {
             .navigationBarTitle("Eye Colors")
         }
         .onAppear(perform: {
-            if eyeColors.isEmpty {
-                fetchEyeColors()
-            }
+            viewModel.fetchEyeColors()
         })
     }
 
@@ -66,16 +64,6 @@ struct EyeColorsView: View {
                     .fill(Color.white)
                     .shadow(color: Color.gray.opacity(0.8), radius: 0.8)
             )
-        }
-    }
-
-    private func fetchEyeColors() {
-        let swapiClient = SwapiClient()
-
-        swapiClient.getEyeColors { eyeColors in
-            self.eyeColors = eyeColors
-        } onFailure: { error in
-            print(error.localizedDescription)
         }
     }
 }

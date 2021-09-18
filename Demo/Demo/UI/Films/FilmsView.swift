@@ -9,17 +9,17 @@ import SwiftUI
 import Swapi
 
 struct FilmsView: View {
-    @State private var films: [Film] = []
+    @EnvironmentObject var viewModel: FilmsViewModel
 
     var body: some View {
         NavigationView {
             ScrollView {
-                if films.isEmpty {
+                if viewModel.films.isEmpty {
                     ProgressView().padding(.top)
                 } else {
                     VStack {
-                        ForEach(0..<films.count) { index in
-                            filmRow(film: films[index])
+                        ForEach(0..<viewModel.films.count) { index in
+                            filmRow(film: viewModel.films[index])
                         }
                     }
 
@@ -29,9 +29,7 @@ struct FilmsView: View {
             .navigationBarTitle("All Films")
         }
         .onAppear(perform: {
-            if films.isEmpty {
-                fetchFilms()
-            }
+            viewModel.fetchFilms()
         })
     }
 
@@ -82,16 +80,6 @@ struct FilmsView: View {
                     .shadow(color: Color.gray.opacity(0.8), radius: 0.8)
             )
             .padding()
-        }
-    }
-
-    private func fetchFilms() {
-        let swapiClient = SwapiClient()
-
-        swapiClient.getFilms { films in
-            self.films = films
-        } onFailure: { error in
-            print(error.localizedDescription)
         }
     }
 }
