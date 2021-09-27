@@ -10,7 +10,7 @@ import Foundation
 public struct Film: Equatable {
     public let title: String
     public let openingCrawl: String
-    public let releaseDate: Date
+    public let releaseDate: Date?
 
     public static func == (lhs: Film, rhs: Film) -> Bool {
         return lhs.title == rhs.title && lhs.openingCrawl == rhs.openingCrawl && lhs.releaseDate == rhs.releaseDate
@@ -22,7 +22,7 @@ extension FilmApiModel {
         Film(
             title: title ?? "",
             openingCrawl: openingCrawl ?? "",
-            releaseDate: releaseDate?.toDate(format: "yyyy-MM-dd") ?? Date()
+            releaseDate: releaseDate?.toDate(format: "yyyy-MM-dd")
         )
     }
 }

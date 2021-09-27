@@ -61,14 +61,16 @@ struct FilmsView: View {
                         .foregroundColor(Color.black)
                         .padding(.bottom, 8)
 
-                    Text(film.releaseDate.toString())
-                        .lineLimit(1)
-                        .font(.caption)
-                        .padding(4)
-                        .background(
-                            RoundedRectangle(cornerRadius: 4)
-                                .fill(Color.gray.opacity(0.3))
-                        )
+                    if let releaseDate = film.releaseDate {
+                        Text(releaseDate.toString())
+                            .lineLimit(1)
+                            .font(.caption)
+                            .padding(4)
+                            .background(
+                                RoundedRectangle(cornerRadius: 4)
+                                    .fill(Color.gray.opacity(0.3))
+                            )
+                    }
                 }
                 .padding(.horizontal)
                 .padding(.bottom)
